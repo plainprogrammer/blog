@@ -1,24 +1,12 @@
-# README
+# Personal Website & Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is the source code for my personal website. You can find it online at
+[https://james.thomps.onl](https://james.thomps.onl). Feel free to re-use any
+code you find useful from my site, but please respect the software license and
+share-alike.
 
-Things you may want to cover:
+## License
 
-* Ruby version
+[![AGPLv3](public/agplv3-with-text-162x68.png)](LICENSE.md)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This project is licensed under the AGPLv3 License - see [LICENSE](LICENSE.md).
