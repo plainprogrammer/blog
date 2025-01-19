@@ -1,0 +1,17 @@
+<div class="flex-column">
+<header class="basis-full">
+  <h1 class="font-bold text-4xl">James Thompson &bull; CV</h1>
+</header>
+<section id="experience" class="basis-2/3">
+  <h2 class="font-bold text-3xl">Work Experience</h2>
+  <ol>
+  <% @work_tenures.each do |tenure| -%>
+    <li class="p-2">
+      <h3 class="font-bold"><%= tenure.employer %></h3>
+      <%= tenure.from_month %>/<%= tenure.from_year %> to
+      <%= tenure.to_present? ? 'Present' : "#{tenure.to_month}/#{tenure.to_year}" %>
+    </li>
+  <% end -%>
+  </ol>
+</section>
+</div>
