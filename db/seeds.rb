@@ -8,8 +8,19 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+CV::WorkTenure.create_with(to_month: nil, to_year: nil, to_present: true)
+              .find_or_create_by!(employer: "FCP Euro", from_month: 10, from_year: 2023).tap do |tenure|
+  CV::WorkRole.find_or_create_by!(title: "Full Stack Engineer", position: 1, work_tenure: tenure, summary: <<-EOS)
+Working with a small team including QA, DevOps, and engineering to develop new
+search capabilities for our main e-commerce site, spearhead work to integrate
+with a new data source for ensuring accurate product-to-vehicle fit matching.
+Also supported the regular operations, maintenance, and improvement of the main
+e-commerce site as well as a variety of back-office systems used in order
+management and warehouse operations.
+EOS
+end
+
 CV::WorkTenure.insert_all!([
-  { employer: "FCP Euro", from_month: 10, from_year: 2023, to_month: nil, to_year: nil, to_present: true },
   { employer: "Allied World Reinsurance Company", from_month: 1, from_year: 2022, to_month: 7, to_year: 2023, to_present: false },
   { employer: "Knowde", from_month: 8, from_year: 2021, to_month: 1, to_year: 2022, to_present: false },
   { employer: "Mavenlink", from_month: 4, from_year: 2019, to_month: 8, to_year: 2021, to_present: false },

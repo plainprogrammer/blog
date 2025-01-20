@@ -10,12 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_20_021815) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_20_031408) do
   create_table "cv_educations", force: :cascade do |t|
     t.integer "to_month"
     t.integer "to_year"
     t.string "institution"
     t.string "degree"
+  end
+
+  create_table "cv_work_roles", force: :cascade do |t|
+    t.string "title"
+    t.text "summary"
+    t.integer "position"
+    t.integer "cv_work_tenures_id"
+    t.index ["cv_work_tenures_id"], name: "index_cv_work_roles_on_cv_work_tenures_id"
   end
 
   create_table "cv_work_tenures", force: :cascade do |t|
