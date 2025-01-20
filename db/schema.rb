@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_14_003136) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_20_021815) do
+  create_table "cv_educations", force: :cascade do |t|
+    t.integer "to_month"
+    t.integer "to_year"
+    t.string "institution"
+    t.string "degree"
+  end
+
   create_table "cv_work_tenures", force: :cascade do |t|
     t.integer "from_month", null: false
     t.integer "from_year", null: false
