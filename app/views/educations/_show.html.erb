@@ -1,0 +1,13 @@
+<% education ||= @education %>
+<%= turbo_frame_tag dom_id(education, :edit) do %>
+  <li class="p-2">
+    <h3 class="font-bold"><%= education.institution %></h3>
+    <h4 class="italic"><%= education.degree %></h4>
+    <%= education.to_month %>/<%= education.to_year %>
+    <% if authenticated? -%>
+      <div class="float-right">
+        <%= link_to "Edit", edit_education_path(education), class: "px-4 border-2 rounded-lg" %>
+      </div>
+    <% end -%>
+  </li>
+<% end %>
