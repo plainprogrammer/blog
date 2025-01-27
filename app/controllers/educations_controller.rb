@@ -6,7 +6,7 @@ class EducationsController < ApplicationController
   def update
     @education = CV::Education.find(params[:id])
     @education.update(education_params)
-    render partial: "educations/show"
+    render partial: "cv/education", locals: { education: @education }
   end
 
   private

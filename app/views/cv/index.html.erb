@@ -33,7 +33,7 @@
   <h2 class="font-bold text-3xl">Education</h2>
   <ol>
     <% @education.each do |education| -%>
-      <%= render partial: "educations/show", locals: { education: education } %>
+      <%= render partial: "cv/education", locals: { education: education } %>
     <% end -%>
   </ol>
 </section>
