@@ -1,0 +1,17 @@
+<%= turbo_frame_tag dom_id(@tenure, :edit) do %>
+  <%= form_for @tenure do |f| %>
+    <label>Employer: <%= f.text_field :employer, class: "border-2" %></label><br/>
+    <label>
+      From:
+      <%= f.select :from_month, (1..12).to_a %>
+      <%= f.select :from_year, (2000..(Date.current.year + 5)).to_a %>
+    </label><br/>
+    <label>
+      To:
+      <%= f.select :to_month, (1..12).to_a %>
+      <%= f.select :to_year, (2000..(Date.current.year + 5)).to_a %>
+    </label><br/>
+    <label>Present? <%= f.checkbox :to_present %></label><br/>
+    <%= f.submit class: "px-4 border-2 rounded-lg" %>
+  <% end %>
+<% end %>

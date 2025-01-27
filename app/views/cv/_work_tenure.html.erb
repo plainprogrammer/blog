@@ -3,6 +3,11 @@
     <h3 class="font-bold"><%= tenure.employer %></h3>
     <%= tenure.from_month %>/<%= tenure.from_year %> to
     <%= tenure.to_present? ? 'Present' : "#{tenure.to_month}/#{tenure.to_year}" %>
+    <% if authenticated? -%>
+      <div class="float-right">
+        <%= link_to "Edit", edit_cv_work_tenure_path(tenure), class: "px-4 border-2 rounded-lg" %>
+      </div>
+    <% end -%>
     <hr />
     <% tenure.roles.each do |role| %>
       <%= render partial: 'cv/work_role', locals: { role: role } %>
