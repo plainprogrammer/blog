@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   namespace :cv do
     resources :educations
     resources :work_tenures
+    resources :work_roles
   end
 
   # Defines the root path route ("/")

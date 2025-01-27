@@ -1,0 +1,7 @@
+<%= turbo_frame_tag dom_id(@role, :edit) do %>
+  <%= form_for @role do |f| %>
+    <label>Title: <%= f.text_field :title, class: "border-2" %></label><br/>
+    <label>Summary: <%= f.textarea :summary, class: "border-2" %></label><br/>
+    <%= f.submit class: "px-4 border-2 rounded-lg" %>
+  <% end %>
+<% end %>

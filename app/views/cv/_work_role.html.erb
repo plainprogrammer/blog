@@ -1,4 +1,9 @@
 <%= turbo_frame_tag dom_id(role, :edit) do %>
   <h4 class="italic"><%= role.title %></h4>
   <p class="pl-4 py-2 pr-32 text-sm"><%= role.summary %></p>
+  <% if authenticated? -%>
+    <div class="float-right">
+      <%= link_to "Edit", edit_cv_work_role_path(role), class: "px-4 border-2 rounded-lg" %>
+    </div>
+  <% end -%>
 <% end %>
