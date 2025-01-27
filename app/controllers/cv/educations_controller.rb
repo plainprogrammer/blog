@@ -1,4 +1,4 @@
-class EducationsController < ApplicationController
+class CV::EducationsController < ApplicationController
   def edit
     @education = CV::Education.find(params[:id])
   end

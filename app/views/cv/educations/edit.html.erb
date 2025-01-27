@@ -1,5 +1,5 @@
 <%= turbo_frame_tag dom_id(@education, :edit) do %>
-  <%= form_for @education, url: education_path(@education) do |f| %>
+  <%= form_for @education do |f| %>
     <label>Institution: <%= f.text_field :institution, class: "border-2" %></label><br/>
     <label>Degree: <%= f.text_field :degree, class: "border-2" %></label><br/>
     <label>
