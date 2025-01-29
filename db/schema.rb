@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_01_25_210421) do
+ActiveRecord::Schema[8.0].define(version: 2025_01_29_225907) do
+  create_table "cv_base_infos", force: :cascade do |t|
+    t.string "name"
+    t.string "subtitle"
+    t.text "summary"
+  end
+
   create_table "cv_educations", force: :cascade do |t|
     t.integer "to_month"
     t.integer "to_year"

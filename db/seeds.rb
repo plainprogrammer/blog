@@ -8,6 +8,19 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+CV::BaseInfo.create(
+  name:     "James Thompson",
+  subtitle: "Hands-On Software Architect",
+  summary:  %Q(
+    Hands-on software engineer and architect with over 20 years experience
+    building software for the web with extensive experience with Ruby on Rails
+    (over 17 years). Committed to developing high quality software using agile
+    practices including test-driven development, continuous integration, and
+    pair programming. An active learner with a strong desire to coach and
+    mentor colleagues as well as learn from them.
+  )
+)
+
 education_yaml = YAML.load_file Rails.root.join("db", "seeds", "cv", "education.yml")
 CV::Education.insert_all!(education_yaml)
 
