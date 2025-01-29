@@ -1,0 +1,12 @@
+<%= turbo_frame_tag :cv_education_new do %>
+  <%= form_for @education do |f| %>
+    <label>Institution: <%= f.text_field :institution, class: "border-2" %></label><br/>
+    <label>Degree: <%= f.text_field :degree, class: "border-2" %></label><br/>
+    <label>
+      Graduated:
+      <%= f.select :to_month, (1..12).to_a %>
+      <%= f.select :to_year, (2000..(Date.current.year + 5)).to_a %>
+    </label><br/>
+    <%= f.submit class: "px-4 border-2 rounded-lg" %>
+  <% end %>
+<% end %>
