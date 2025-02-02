@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe CV::Education, type: :model do
-  subject(:education) { described_class.new(to_month: 5, to_year: 2006, institution: "A School", degree: "A Degree") }
+  subject(:education) { FactoryBot.create(:cv_education) }
 
   its(:to_month) { is_expected.to eq 5 }
   its(:to_year) { is_expected.to eq 2006 }
