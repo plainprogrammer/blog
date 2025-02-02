@@ -56,6 +56,8 @@ group :development, :test do
   gem "rspec-its", "~> 2.0"
   gem "shoulda-matchers", "~> 6.4"
   gem "simplecov", "~> 0.22", require: false
+
+  gem "factory_bot_rails", "~> 6.4.4"
 end
 
 group :development do
