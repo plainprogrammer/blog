@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe CV::WorkTenure do
-  subject(:work_tenure) { FactoryBot.create(:work_tenure) }
+  subject(:work_tenure) { FactoryBot.create(:cv_work_tenure) }
 
   its(:from_month) { is_expected.to eq 1 }
   its(:from_year) { is_expected.to eq 2024 }
