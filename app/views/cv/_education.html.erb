@@ -5,7 +5,13 @@
     <%= education.to_month %>/<%= education.to_year %>
     <% if authenticated? -%>
       <div class="float-right">
-        <%= link_to "Edit", edit_cv_education_path(education), class: "px-4 border-2 rounded-lg" %>
+        <%= link_to icon("fa-solid", "pen-to-square"), edit_cv_education_path(education), aria: { label: "Edit Education" } %>
+        &nbsp;&nbsp;
+        <%= link_to icon("fa-solid", "trash-can"), cv_education_path(education), data: {
+                                                                                   turbo_method: :delete,
+                                                                                   turbo_confirm: 'Are you sure?'
+                                                                                 },
+                                                                                 aria: { label: "Delete Education" } %>
       </div>
     <% end -%>
   </li>

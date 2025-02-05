@@ -18,6 +18,12 @@ class CV::EducationsController < ApplicationController
     render partial: "cv/education", locals: { education: @education }
   end
 
+  def destroy
+    @education = CV::Education.find(params[:id])
+    @education.destroy
+    render partial: "cv/educations", locals: { educations: CV::Education.order(to_year: :desc, to_month: :desc).all }
+  end
+
   private
 
   def education_params
