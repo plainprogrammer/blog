@@ -44,6 +44,9 @@ gem "thruster", require: false
 
 gem "font-awesome-sass", "~> 6.7.0", ">= 6.7.2"
 
+gem "superview", "~> 1.0"
+gem "view_component", "~> 3.21"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri windows ], require: "debug/prelude"
