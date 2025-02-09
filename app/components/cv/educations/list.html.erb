@@ -1,0 +1,12 @@
+<section id="education" class="basis-1/3">
+  <h2 class="font-bold text-3xl">Education</h2>
+  <ol>
+    <% @educations.each do |education| -%>
+      <li class="p-2">
+        <h3 class="font-bold"><%= education.institution %></h3>
+        <h4 class="italic"><%= education.degree %></h4>
+        <%= education.to_month %>/<%= education.to_year %>
+      </li>
+    <% end -%>
+  </ol>
+</section>
