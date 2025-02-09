@@ -8,5 +8,7 @@ RSpec.describe CV::Education, type: :model do
   its(:institution) { is_expected.to eq "A School" }
   its(:degree) { is_expected.to eq "A Degree" }
 
+  it { is_expected.to validate_presence_of(:institution) }
+  it { is_expected.to validate_presence_of(:degree) }
   it { is_expected.to validate_inclusion_of(:to_month).in_range(1..12) }
 end
