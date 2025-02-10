@@ -130,7 +130,7 @@ GEM
       actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.9.1)
-    kamal (2.4.0)
+    kamal (2.5.2)
       activesupport (>= 7.0)
       base64 (~> 0.2)
       bcrypt_pbkdf (~> 1.0)
@@ -331,8 +331,9 @@ GEM
     sqlite3 (2.5.0-arm64-darwin)
     sqlite3 (2.5.0-x86_64-linux-gnu)
     sqlite3 (2.5.0-x86_64-linux-musl)
-    sshkit (1.23.2)
+    sshkit (1.24.0)
       base64
+      logger
       net-scp (>= 1.1.2)
       net-sftp (>= 2.1.2)
       net-ssh (>= 2.8.0)
@@ -342,13 +343,6 @@ GEM
     stringio (3.1.2)
     superview (1.0.0)
       zeitwerk (~> 2.0)
-    tailwindcss-rails (3.3.1)
-      railties (>= 7.0.0)
-      tailwindcss-ruby (~> 3.0)
-    tailwindcss-ruby (3.4.17-aarch64-linux)
-    tailwindcss-ruby (3.4.17-arm-linux)
-    tailwindcss-ruby (3.4.17-arm64-darwin)
-    tailwindcss-ruby (3.4.17-x86_64-linux)
     thor (1.3.2)
     thruster (0.1.10)
     thruster (0.1.10-aarch64-linux)
@@ -418,7 +412,6 @@ DEPENDENCIES
   sqlite3 (>= 2.1)
   stimulus-rails
   superview (~> 1.0)
-  tailwindcss-rails
   thruster
   turbo-rails
   tzinfo-data
