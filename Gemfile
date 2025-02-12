@@ -14,8 +14,10 @@ gem "importmap-rails"
 gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
-# User CSS Zero [https://github.com/lazaronixon/css-zero]
+# CSS Zero [https://github.com/lazaronixon/css-zero]
 gem "css-zero", "~> 1.0"
+# Bootstrap Icons [https://github.com/NILID/bootstrap_icons_rails]
+gem "bootstrap_icons_rails", "~> 1.113.02"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
