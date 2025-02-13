@@ -22,20 +22,20 @@ RSpec.describe CV::EducationsController, type: :controller do
       let(:new_attributes) { { degree: 'New Degree' } }
 
       it 'updates the requested education' do
-        patch :update, params: { id: education.id, education: new_attributes }
+        patch :update, params: { id: education.id, cv_education: new_attributes }
         education.reload
         expect(education.degree).to eq('New Degree')
       end
 
       it 'redirects to the education' do
-        patch :update, params: { id: education.id, education: new_attributes }
-        expect(response).to redirect_to(education)
+        patch :update, params: { id: education.id, cv_education: new_attributes }
+        expect(response).to redirect_to(root_url)
       end
     end
 
     context 'with invalid params' do
       it 'returns a success response (i.e., to display the edit template)' do
-        patch :update, params: { id: education.id, education: { degree: nil } }
+        patch :update, params: { id: education.id, cv_education: { degree: nil } }
         expect(response).to be_successful
       end
     end
@@ -50,7 +50,7 @@ RSpec.describe CV::EducationsController, type: :controller do
 
     it 'redirects to the educations list' do
       delete :destroy, params: { id: education.id }
-      expect(response).to redirect_to(cv_educations_url)
+      expect(response).to redirect_to(root_url)
     end
   end
 end

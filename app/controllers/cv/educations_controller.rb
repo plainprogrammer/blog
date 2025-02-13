@@ -9,14 +9,14 @@ class CV::EducationsController < ApplicationController
 
   def update
     education.update!(education_params)
-    redirect_to education
+    redirect_to root_url
   rescue ActiveRecord::RecordInvalid
     render CV::Educations::Edit.new(education)
   end
 
   def destroy
     education.destroy!
-    redirect_to cv_educations_url
+    redirect_to root_url
   end
 
   private
@@ -26,6 +26,6 @@ class CV::EducationsController < ApplicationController
   end
 
   def education_params
-    params.require(:education).permit(:institution, :degree, :to_month, :to_year)
+    params.require(:cv_education).permit(:institution, :degree, :to_month, :to_year)
   end
 end

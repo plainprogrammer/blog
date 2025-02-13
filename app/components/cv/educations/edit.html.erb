@@ -21,13 +21,13 @@
     </div>
 
     <div class="field">
-        <%= form.label :start_date %>
-        <%= form.date_select :start_date %>
+        <%= form.label :to_month %>
+        <%= form.select :to_month, (1..12).to_a %>
     </div>
 
     <div class="field">
-        <%= form.label :end_date %>
-        <%= form.date_select :end_date %>
+        <%= form.label :to_year %>
+        <%= form.select :to_year, (1970..Date.current.year).to_a %>
     </div>
 
     <div class="actions">
