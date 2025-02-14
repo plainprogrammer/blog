@@ -1,9 +1,9 @@
 require "rails_helper"
 
 RSpec.describe CV::Educations::List, type: :component do
-  before do
-    CV::Education.create!(institution: "A College", degree: "B.S.", to_month: 6, to_year: 2021)
-  end
+  let!(:education) { CV::Education.create!(institution: "A College", degree: "B.S.", to_month: 6, to_year: 2021) }
+
+  its(:educations) { is_expected.to eq [ education ] }
 
   it "renders a list of educations" do
     render_inline(CV::Educations::List.new)

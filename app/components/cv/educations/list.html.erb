@@ -1,7 +1,7 @@
 <section id="education" class="basis-1/3">
   <h2 class="font-bold text-3xl">Education</h2>
   <ol>
-    <% @educations.each do |education| -%>
+    <% educations.each do |education| -%>
       <%= render CV::Educations::Show.new(education) %>
     <% end -%>
   </ol>

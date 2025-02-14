@@ -1,11 +1,11 @@
 <li class="p-2">
-  <h3 class="font-bold"><%= @education.institution %></h3>
-  <h4 class="italic"><%= @education.degree %></h4>
-  <%= @education.to_month %>/<%= @education.to_year %>
+  <h3 class="font-bold"><%= education.institution %></h3>
+  <h4 class="italic"><%= education.degree %></h4>
+  <%= education.to_month %>/<%= education.to_year %>
   <div>
-    <%= link_to helpers.bi_icon("pencil-fill"), edit_cv_education_path(@education) %>
+    <%= link_to helpers.bi_icon("pencil-fill"), edit_cv_education_path(education) %>
     <%= link_to helpers.bi_icon("trash3-fill"),
-                cv_education_path(@education),
+                cv_education_path(education),
                 data: {
                   turbo_confirm: "Are you sure?",
                   turbo_method: :delete,
