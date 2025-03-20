@@ -15,7 +15,7 @@ gem "turbo-rails"
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem "stimulus-rails"
 # User CSS Zero [https://github.com/lazaronixon/css-zero]
-gem "css-zero", "~> 1.0"
+gem "css-zero", "~> 1.1"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
