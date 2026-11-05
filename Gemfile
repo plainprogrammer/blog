@@ -57,7 +57,7 @@ group :development, :test do
 
   gem "rspec-rails", "~> 8.0"
   gem "rspec-its", "~> 2.0"
-  gem "shoulda-matchers", "~> 6.4"
+  gem "shoulda-matchers", "~> 8.0"
   gem "simplecov", "~> 1.3", require: false
 
   gem "capybara", "~> 3.40"
